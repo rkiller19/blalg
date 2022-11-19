@@ -1,5 +1,5 @@
 let Environment = {
-  presaleAddress: "0x75966f3A20966D4dEF259c96Ed0fcfAD309A429F",
+  presaleAddress: "0x96Da953B035dA80eA2382fffAa2aBB4734A0941C",
 };
 
 export default Environment;

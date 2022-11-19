@@ -15,11 +15,11 @@ function App() {
   const { buy } = useBuy();
 
 
-  const price = 10;
+  const price = 800;
   const { login, logout } = useAuth();
   const { account } = useWeb3React();
 
-  const [num, setNum] = useState(0);
+  const [num, setNum] = useState(10);
 
 
 
@@ -62,7 +62,7 @@ function App() {
       <ToastContainer />
 
       <div className="root">
-        <div className="lefttree">
+       {/*  <div className="lefttree">
           <img
             className="img-fluid leftimg"
             src={require("./assets/img/left.svg").default}
@@ -75,7 +75,7 @@ function App() {
             src={require("./assets/img/right.png").default}
             alt=""
           />
-        </div>
+        </div> */}
         {/* <div className="birdsdiv">
           <img
             className="img-fluid birdimg"
@@ -84,8 +84,9 @@ function App() {
           />
         </div> */}
         <Container>
-          <div className="cus-navb mt-3 d-flex justify-content-between align-items-center">
-            <div className="logo">
+        <div className="cus-navb mt-3 d-flex justify-content-between align-items-center">
+           
+        <div className="logo">
               <img
                 className="img-fluid logo-img"
                 src={require("./assets/img/logo.svg").default}
@@ -99,20 +100,62 @@ function App() {
                   <button className="cusbtn" onClick={Disconnect}>Disconnect</button>
               }
             </div>
+            
           </div>
+          <Row className="mt-1 pt-1">
+          <Col
+              className=" d-flex justify-content-center align-items-center "
+              lg="1.5"
+            >
+              
+              <div>
+                <h1 className="title">Arbitrex Decentralized Exchange</h1>
+              </div> 
+              
+              
+          </Col>
+          </Row>
+          <Row className="mt-3 pt-3">
+          <Col
+              className=" d-flex justify-content-end align-items-center "
+              lg="30"
+            >
+              <div class="dropdown">
+  <button class="dropbtn">Presale Details</button>
+  <div class="dropdown-content">
+  <a href="#">Start Time: 19 November 21:00 UTC</a>
+    <a href="#">End Time: 20 November 21:00 UTC</a>
+    <a href="#">Soft Cap: 30000$ USD</a>
+    <a href="#">Hard Cap: 3000000$ USD </a>
+    <a href="#">Price: 1.5$ USD </a>
+    <a href="https://medium.com/@arbitrex/announcing-presale-details-arbx-airdrop-8da864f8a31f ">Click here for more information about our presale!</a>
+  </div>
+</div>
+               
+          </Col>
 
-          <Row className="mt-5 pt-5">
+          </Row>
+               
+          
+          <Row className="mt-3 pt-3">
             <Col
               className=" d-flex justify-content-center align-items-center "
               lg="12"
-            >
+            > 
+            
               <div className="">
+              
+              <div className="text-center mt-4">
+                  <h3 className="subtitle">Join our Presale</h3>
+                </div>
+                <br>
+                </br>
                 <div className="button-mint d-flex justify-content-center">
                   {/* <button className="minus mr-3" onClick={minus}>
                     -
                   </button> */}
                   <div className="display-number d-flex justify-content-center align-items-center">
-                    <input type="text" value={num} onChange={(e) => setNum(e.target.value)}></input>
+                    <input type="text" placeholder=" # of Tokens" value={num} onChange={(e) => setNum(e.target.value)}></input>
                   </div>
                   {/* <button className="plus ml-3" onClick={plus}>
                     <img
@@ -123,22 +166,27 @@ function App() {
                     +
                   </button>  */}
                 </div>
+                
                 <div className="mintnowdiv text-center mt-5">
                   <button className="cusbtn" onClick={Buy}>Buy Now</button>
                 </div>
                 <div className="text-center mt-4">
                   {/* <h3 className="subtitle"> {supply} / {supplyMax}</h3> */}
                 </div>
+                
                 <div className="text-center mt-4">
-                  <h3 className="subtitle">{price} Tokens Per AVAX</h3>
+                  <h3 className="subtitle">1 $ARBX = 1.5$ dollars</h3>
                 </div>
-                <div className="text-center mt-5">
+                {/* <div className="text-center mt-5">
                   <img
                     className="img-fluid opensealogo"
                     // src={require("./assets/img/opensea.png").default}
                     alt=""
                   />
-                </div>
+                </div> */}
+                
+                
+                
               </div>
             </Col>
             {/* <Col lg="6" className="mbr">
